@@ -24,7 +24,7 @@ jobs:
           echo "Trying to strip out notebooks"
           nbdev_clean
           echo "Check that strip out was unnecessary"
-	  git diff
+          git diff
           git status # display the status to see which nbs need cleaning up
           if [[ `git status -uno` ]]; then
             git status -uno
