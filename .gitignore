@@ -3,3 +3,5 @@
 /_site/
 /_proc/
 __pycache__/
+.ipynb_checkpoints/
+_docs/
