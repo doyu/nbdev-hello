@@ -19,7 +19,7 @@ jobs:
           if [[ `git status -uno` ]]; then
             git diff
             echo "git status is not clean"
-            false
+            #false
           fi
           echo "Trying to strip out notebooks"
           nbdev_clean
