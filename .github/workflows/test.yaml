@@ -16,7 +16,7 @@ jobs:
           echo "Doing editable install..."
           test -f setup.py && pip install -e ".[dev]"
           echo "Check we are starting with clean git checkout"
-	  git --version
+          git --version
           if [[ `git status -uno` ]]; then
             git diff
             echo "git status is not clean"
