@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-hello"
+  site-url: "https://doyu.github.io/nbdev-hello"
+  description: "hello nbdev!"
+  repo-branch: main
+  repo-url: "https://github.com/doyu/nbdev-hello"
