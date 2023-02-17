@@ -17,7 +17,7 @@ jobs:
           test -f setup.py && pip install -e ".[dev]"
           echo "Check we are starting with clean git checkout"
           git --version
-          if [[ -z `git status -uno` ]]; then
+          if [[ `git status -uno` ]]; then
             git diff
             echo "git status is not clean"
             false
@@ -27,7 +27,7 @@ jobs:
           echo "Check that strip out was unnecessary"
           git diff
           git status # display the status to see which nbs need cleaning up
-          if [[ -z `git status -uno` ]]; then
+          if [[ `git status -uno` ]]; then
             git status -uno
             echo -e "!!! Detected unstripped out notebooks\n!!!Remember to run nbdev_install_hooks"
             false
